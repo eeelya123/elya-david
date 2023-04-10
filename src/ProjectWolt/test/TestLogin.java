@@ -17,11 +17,9 @@ public class TestLogin {
         prodPageRiner.setcloseUserElement();
         prodPageRiner.setclickOnPlaceInTLVrElement();
         Thread.sleep(5000);
-
-        prodPageRiner.setRestaurantElement();
+          prodPageRiner.getText();
         Thread.sleep(4000);
 
         base.seleniumClose(driver);
     }
-
 }
