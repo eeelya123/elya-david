@@ -1,4 +1,4 @@
-package ProjectWolt.Pages;
+package AddName;
 
 
 import org.openqa.selenium.WebDriver;
