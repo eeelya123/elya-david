@@ -1,7 +1,7 @@
 package ProjectRainer.test;
 
 
-import Project.Pages.HomePageRainer;
+import ProjectRyanair.Pages.HomePageRainer;
 import Selenium.SelenuimBase;
 import org.openqa.selenium.chrome.ChromeDriver;
 

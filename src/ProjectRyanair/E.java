@@ -1,4 +1,4 @@
-package Project;
+package ProjectRyanair;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;

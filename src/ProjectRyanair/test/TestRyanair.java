@@ -1,11 +1,11 @@
-package Project.test;
+package ProjectRyanair.test;
 
 
-import Project.Pages.HomePageRainer;
+import ProjectRyanair.Pages.HomePageRainer;
 import Selenium.SelenuimBase;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TestLogin {
+public class TestRyanair {
 
     public static void main(String[] args) throws InterruptedException {
         SelenuimBase base = new SelenuimBase();

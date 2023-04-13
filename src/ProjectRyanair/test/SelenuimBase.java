@@ -1,4 +1,4 @@
-package Project.test;
+package ProjectRyanair.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;

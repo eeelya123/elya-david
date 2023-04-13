@@ -9,12 +9,13 @@ public class HomePageRainer {
 
     private WebDriver driver;
 
-
+// Cookies pop-up window
     @FindBy(css = "#cookie-popup-with-overlay > div > div.cookie-popup-with-overlay__buttons > button.cookie-popup-with-overlay__button")
     WebElement closekoki;
+
     @FindBy(xpath = "/html/body/hp-app-root/hp-home-container/hp-home/hp-header/header/ry-header/div/div[2]/hp-header-content-container/hp-header-content/hp-header-sections-group[2]/hp-header-menu-item[4]/button/span")
     WebElement connect;
-    @FindBy(css = "#ry-modal-portal > div > ry-auth-popup-container > div > ry-auth-popup > div > ry-login > form > ry-auth-email > ry-input-d > div > input")
+    @FindBy(name = "email")
     WebElement loginName2;
     @FindBy(css = "#ry-modal-portal > div > ry-auth-popup-container > div > ry-auth-popup > div > ry-login > form > ry-auth-password > ry-input-d > div > input")
     WebElement passwordElement;
