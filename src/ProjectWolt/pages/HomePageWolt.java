@@ -1,4 +1,4 @@
-package ProjectWolt.Pages;
+package ProjectWolt.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,25 +12,24 @@ public class HomePageWolt {
     private WebDriver Driver;
 
     @FindBy(xpath = "/html/body/div[5]/div/div/div/button[2]/div[3]")
-    WebElement closekokiElement;  //Closing the cookie pop-up window
+    WebElement closeKokiElement;
 
-
-    @FindBy(xpath = "//*[@id=\"app\"]/div[2]/div/header/div[2]/div[3]/div/div/button")
-    WebElement SignupElement; //connect to wolt
+    @FindBy(css = "button[type='button']")
+    WebElement SignupElement;
 
     @FindBy(css = "input#method-select-email.sc-8b48855d-0")
-    WebElement emailElement; //Enter email
+    WebElement emailElement;
 
     @FindBy(xpath = "/html/body/div[7]/div/aside/div[1]/button")
-    WebElement closeUserElement; // Log in - close button
+    WebElement closeUserElement;
 
     @FindBy(xpath = "//*[@id=\"mainContent\"]/div/div[1]/div/div[2]/div[3]/a")
-    WebElement clickOnPlaceInTLVrElement; //Click on a link that appears on the home page
-    @FindBy(xpath = "//*[@id=\"mainContent\"]/div[3]/div/div/div[7]/div/div[2]/div/div/div[1]/a/div/div/div[2]/div/p")
-    List<WebElement> printText; //Prints the number of stores in Tel Aviv
+    WebElement clickOnPlaceInTLVrElement;
+    @FindBy(xpath = "//*[@id=\"mainContent\"]/div[3]/div/div/div[5]/div/div[2]/div/div/div[1]/a/div/div/div[2]/div/p")
+    List<WebElement> getStoresElement;
 
-    @FindBy(css = "#mainContent > div.sc-84c3953a-0.goPFCh > div > div > div:nth-child(7) > div > div.sc-fdefad94-0.egehHl > div > div > div:nth-child(1) > a > div > div > div.sc-ce2624b5-0.dehyAS")
-    WebElement clickOnShopsInTelAvivElement; //Entrance to shops in Tel Aviv
+    @FindBy(xpath = "//*[@id=\"mainContent\"]/div[3]/div/div/div[5]/div/div[2]/div/div/div[1]/a/div/div/div[2]/div/p")
+    WebElement clickOnShopsInTelAvivElement;
 
     public HomePageWolt(WebDriver driver) {
         this.Driver = driver;
@@ -38,17 +37,20 @@ public class HomePageWolt {
 
     }
 
+    //Closing the cookie pop-up window
     public void closekoki() throws InterruptedException {
         Thread.sleep(5000);
-        closekokiElement.click();
+        closeKokiElement.click();
     }
 
+    //connect to wolt
     public void setSignupElement() throws InterruptedException {
         Thread.sleep(2000);
         SignupElement.click();
 
     }
 
+    //Enter email
     public void setemailElement(String passwordText) throws InterruptedException {
         Thread.sleep(2000);
         emailElement.clear();
@@ -56,27 +58,29 @@ public class HomePageWolt {
         emailElement.sendKeys(passwordText);
     }
 
+    // Log in - close button
     public void setcloseUserElement() throws InterruptedException {
         Thread.sleep(2000);
         closeUserElement.click();
 
     }
 
-
+    //Click on a link that appears on the home page
     public void setclickOnPlaceInTLVrElement() throws InterruptedException {
         Thread.sleep(2000);
         clickOnPlaceInTLVrElement.click();
 
     }
-
+    //Prints the number of stores in Tel Aviv
     public void getText() {
 
-        for (WebElement printT : printText) {
+        for (WebElement printT : getStoresElement) {
             String print1 = printT.getText();
-            System.out.println(print1);
+            System.out.println("בתל אביב"+print1);
         }
     }
 
+    //Entrance to shops in Tel Aviv
     public void setcclickOnShopsInTelAvivElement() throws InterruptedException {
         Thread.sleep(2000);
         clickOnShopsInTelAvivElement.click();
